@@ -3,11 +3,16 @@ package team1;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-
+/**
+ * 入口函数，创建对应的FlowLayoutWindow对象
+ * @author ghjhh
+ *
+ */
 public class UI {
 	public static void main(String[] args) {
 		FlowLayoutWindow window =new FlowLayoutWindow();
@@ -17,30 +22,42 @@ public class UI {
 	}
 	
 }
+/**
+ * 完成面板设计，创建三个文本框，输入学号，点击按钮查询学科返回对应成绩
+ * @author ghjhh
+ *
+ */
 class FlowLayoutWindow extends JFrame{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 3937967043739601992L;
-
 	FlowLayoutWindow(){
 		setLayout(new FlowLayout());	
-		User user = new User();
+		Student student = new Student();
 		MyFind find = new MyFind();
-		JTextField text = new JTextField("账户",10);
-		JTextField text1 = new JTextField("密码",10);
+		JTextField text = new JTextField("学号",10);
+		JTextField text1 = new JTextField("学科",10);
+		JTextField text2 = new JTextField("成绩",10);
 		add(text);
 		add(text1);
-		JButton button = new JButton("ok");
+		add(text2);
+		JButton button = new JButton("查询");
 		add(button);
 		button.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自动生成的方法存根
-				user.setAccount(text.getText());
-				user.setPsw(text1.getText());
-				String res = find.findInFile(user);
-     			System.out.println(res);
+				student.setStudentId(text.getText());
+				student.setChoose(text1.getText());
+				Student res;
+				try {
+					if(student.getChoose().equals("数学")){
+						 res = find.findMathScore(student);
+					}else{
+						res = find.findComputerScore(student);
+					}
+					text2.setText(String.valueOf(res.getGetScore()));;
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+     			
 			}	
 		    });
 	}
