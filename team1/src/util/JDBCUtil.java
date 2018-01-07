@@ -103,6 +103,7 @@ public class JDBCUtil {
 			}
 		}
 	}
+	//以下是各个功能的接口定义
 	/**
 	 * delete功能的抽象接口
 	 * @author ghjhh
@@ -148,5 +149,19 @@ public class JDBCUtil {
 		 * @throws SQLException
 		 */
 		abstract boolean insert(Student student)throws SQLException;
+	}
+	/**
+	 * 登陆功能接口
+	 * @author ghjhh
+	 *
+	 */
+	public interface Load{
+		/**
+		 * 登陆验证
+		 * @param student
+		 * @return
+		 * @throws SQLException
+		 */
+		abstract boolean load(Student student)throws SQLException;
 	}
 }

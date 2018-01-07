@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import team1.MyFind;
+import dao.MyFind;
 import team1.Student;
 
 public class FindOneBoard {

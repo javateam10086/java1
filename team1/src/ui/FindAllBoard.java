@@ -18,8 +18,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-import team1.MyDelete;
-import team1.MyFind;
+import dao.MyDelete;
+import dao.MyFind;
 import team1.Student;
 
 public class FindAllBoard {

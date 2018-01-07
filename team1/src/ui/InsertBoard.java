@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import team1.MyInsert;
+import dao.MyInsert;
 import team1.Student;
 
 public class InsertBoard {
