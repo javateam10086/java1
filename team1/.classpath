@@ -27,6 +27,6 @@
 	<classpathentry kind="lib" path="D:/apache-tomcat-8.0.20/lib/tomcat-util-scan.jar"/>
 	<classpathentry kind="lib" path="D:/apache-tomcat-8.0.20/lib/tomcat-websocket.jar"/>
 	<classpathentry kind="lib" path="D:/apache-tomcat-8.0.20/lib/websocket-api.jar"/>
-	<classpathentry kind="lib" path="F:/Desktopnew/mysql-connector-java-5.1.45-bin.jar"/>
+	<classpathentry kind="lib" path="F:/Desktopnew/java外部jar包/mysql-connector-java-5.1.45-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

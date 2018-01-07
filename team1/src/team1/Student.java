@@ -7,8 +7,8 @@ package team1;
 public class Student {
 	private String name;
 	private String studentId;
-	private int math_score;
-	private int computer_score;
+	private int mathScore;
+	private int computerScore;
 	private String choose; 
 	private int getScore;
 	
@@ -36,20 +36,20 @@ public class Student {
 		this.studentId = studentId;
 	}
 
-	public int getMath_score() {
-		return math_score;
+	public int getMathScore() {
+		return mathScore;
 	}
 
-	public void setMath_score(int math_score) {
-		this.math_score = math_score;
+	public void setMathScore(int mathScore) {
+		this.mathScore = mathScore;
 	}
 
-	public int getComputer_score() {
-		return computer_score;
+	public int getComputerScore() {
+		return computerScore;
 	}
 
-	public void setComputer_score(int computer_score) {
-		this.computer_score = computer_score;
+	public void setComputerScore(int computerScore) {
+		this.computerScore = computerScore;
 	}
 
 	public int getGetScore() {
